@@ -70,7 +70,7 @@ st.markdown("""
 # Você DEVE substituir "COLE_SUA_NOVA_CHAVE_AQUI" por uma chave nova gerada em platform.openai.com
 KEYS = {
     "google": "AIzaSyAO1P8Vo82k13ubKZ5-qPqJW1DUQRAFLe4",
-    "openai": "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" 
+    "openai": "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" 
 }
 # Nota: Se a chave acima continuar dando erro 401, é porque ela foi realmente bloqueada pela OpenAI.
 
@@ -596,4 +596,5 @@ with tab_editor:
         novo_prompt_presc = st.text_area("Editor Prescrição", value=st.session_state["prompt_prescricao"], height=600, key="edit_prompt_presc")
         if st.button("Salvar Regras de Prescrição", key="btn_save_presc"):
             st.session_state["prompt_prescricao"] = novo_prompt_presc
+
             st.toast("Regras de Prescrição atualizadas!", icon="✅")
